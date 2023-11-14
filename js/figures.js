@@ -1,33 +1,30 @@
-
-
-function draw() {
+function rectangleCanvas(width, height, mode, color){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "red";
-        ctx.fillRect(0, 0, 999, 10); //1
-        ctx.fillRect(0, 20, 999, 10); //3
-        ctx.fillRect(0, 40, 999, 10); //5
-        ctx.fillRect(0, 60, 999, 10); //7
-        ctx.fillRect(0, 80, 999, 10); //9
-        ctx.fillRect(0, 100, 999, 10); //11
-        ctx.fillRect(0, 120, 999, 10); //13
-
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 10, 999, 10); //2
-        ctx.fillRect(0, 30, 999, 10); //4
-        ctx.fillRect(0, 50, 999, 10); //6
-        ctx.fillRect(0, 70, 999, 10); //8
-        ctx.fillRect(0, 90, 999, 10); //10
-        ctx.fillRect(0, 110, 999, 10); //12
-
-        ctx.fillStyle = "blue";
-        ctx.fillRect(0, 0, 100, 70); //blaa rektangel
+        ctx.fillStyle = color;
+        ctx.fillRect(0, 0, width, height)
    }
 }
-  
-draw();
-  
+
+rectangleCanvas(150, 100, "solid", "red")
+
+function rectangleSVG(width, height, mode, color){
+    document.addEventListener("DOMContentLoaded", function() 
+        var svg = document.getElementById('SVGobjekt');
+        console.log(svg);
+
+        var rektangel = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rektangel.setAttribute("width", width);
+            rektangel.setAttribute("height", height);
+            rektangel.setAttribute("fill", color);
+            rektangel.setAttribute("x", "0");
+            rektangel.setAttribute("y", "0");
+        svg.appendChild(rektangel);
+    )
+}
+rectangleSVG(150, 100, "solid", "red")
+
 document.addEventListener("DOMContentLoaded", function() {
     var svg = document.getElementById('SVGobjekt');
     console.log(svg);
@@ -147,45 +144,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log(svg)
 });
-
-
-//graf dritt//
-
-const data = [0, 30, 37, 5, 4, 15, 48, 12, 4];
-
-
-const svg = d3.select("#graf");
-
-
-const xScale = d3.scaleBand()
-                .domain(d3.range(data.length))
-                .range([0, 400])
-                .padding(0.1);
-
-const yScale = d3.scaleLinear()
-                .domain([0, d3.max(data)])
-                .range([0, 300]);
-
-
-svg.selectAll("rect")
-    .data(data)
-    .enter()
-    .append("rect")
-    .attr("class", "bar")
-    .attr("x", (d, i) => xScale(i))
-    .attr("y", (d) => 300 - yScale(d))
-    .attr("width", xScale.bandwidth())
-    .attr("height", (d) => yScale(d));
-
-
-const xAxis = d3.axisBottom(xScale);
-svg.append("g")
-    .attr("class", "axis")
-    .attr("transform", "translate(0, 300)")
-    .call(xAxis);
-
-
-const yAxis = d3.axisLeft(yScale);
-svg.append("g")
-    .attr("class", "axis")
-    .call(yAxis);
