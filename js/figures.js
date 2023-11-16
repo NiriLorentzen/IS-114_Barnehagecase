@@ -50,15 +50,63 @@ function rectangleSVG(width, height, mode, color){
         var svg = document.getElementById('SVGobjekt');
         console.log(svg);
 
-        var rektangel = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-            rektangel.setAttribute("width", width);
-            rektangel.setAttribute("height", height);
-            rektangel.setAttribute("fill", color);
-            rektangel.setAttribute("x", "0");
-            rektangel.setAttribute("y", "0");
-        svg.appendChild(rektangel);
+        var rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rectangle.setAttribute("width", width);
+            rectangle.setAttribute("height", height);
+            rectangle.setAttribute("fill", color);
+            rectangle.setAttribute("x", "0");
+            rectangle.setAttribute("y", "0");
+
+        if (mode == "solid"){
+            rectangle.setAttributeNS(null, 'fill', color);
+        }
+        if (mode == "outline"){
+            rectangle.setAttributeNS(null, 'stroke', color);
+            rectangle.setAttributeNS(null, 'stroke-width', 2);
+            rectangle.setAttributeNS(null, 'fill', "none");
+        }
+        const mode_tekst = mode.split("(");
+        if (mode_tekst[0] == "mode-fade"){
+            var fill_opacity = mode_tekst[1].replace(")", "")
+            console.log("HER DIN TULLING", fill_opacity)
+            rectangle.setAttributeNS(null, 'fill-opacity', fill_opacity);
+        }
+        console.log("FAEN", mode_tekst)
+        svg.appendChild(rectangle);
         console.log(svg)
 })
 }
-rectangleSVG(150, 100, "solid", "red")
+rectangleSVG(150, 100, "outline", "red")
+rectangleSVG(30, 70, "solid", "green")
+rectangleSVG(50, 50, "mode-fade(0.7)", "blue")
 
+function circleSVG(radius, mode, color){
+    document.addEventListener("DOMContentLoaded", function() {
+        var svg = document.getElementById('SVGobjekt');
+        console.log(svg);
+
+        var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+        circle.setAttributeNS(null, 'cx', 50);
+        circle.setAttributeNS(null, 'cy', 50);
+        circle.setAttributeNS(null, 'r', radius);
+        if (mode == "solid"){
+            circle.setAttributeNS(null, 'fill', color);
+        }
+        if (mode == "outline"){
+            circle.setAttributeNS(null, 'stroke', color);
+            circle.setAttributeNS(null, 'stroke-width', 2);
+            circle.setAttributeNS(null, 'fill', "none");
+            //fill: none
+            //stroke-width: 2px;
+            //stroke: maroon;
+        }
+
+        ///circle.setAttributeNS(null, 'fill-opacity', 0.5);  fra 0 til 1, 1 er solid, 0 er ingenting
+
+        //fill-opacity="0.5"
+        //fill="purple"
+        svg.appendChild(circle);
+    })
+}
+//circleSVG(22, "solid", "red")
+circleSVG(22, "outline", "red")
