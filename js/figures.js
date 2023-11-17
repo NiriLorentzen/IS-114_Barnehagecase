@@ -10,9 +10,19 @@ function rectangleCanvas(width, height, mode, color){
         ctx.strokeStyle = color;
         ctx.strokeRect(0, 0, width, height)
       }
+      if (typeof mode == 'number'){
+        var fill_opacity = mode;
+        ctx.fillStyle = color; //gjør string tekst om til hex, "red" -> #ff0000
+        color = ctx.fillStyle; //gjør stringen om til hexen
+        rgba_string = "rgba(" + hex_to_rgb(color) + fill_opacity + ")"; //lager stringen som trengs for at rgba skal fungere, hex_to_rgb brukes for å endre hexen om til rgb, feks: #ff0000 -> 128, 0, 0
+        ctx.fillStyle = rgba_string;
+        ctx.fillRect(0, 0, width, height)
+      }
    }
 }
 
+rectangleCanvas(999, 999, 0.5, "red")
+rectangleCanvas(10, 10, "solid", "blue")
 rectangleCanvas(150, 100, "outline", "blue")
 
 function circleCanvas(radius, mode, color){
@@ -34,14 +44,39 @@ function circleCanvas(radius, mode, color){
             ctx.stroke(circle);
         }
 
+        if (typeof mode == 'number'){
+            var fill_opacity = mode;
+            ctx.fillStyle = color; //gjør string tekst om til hex, "red" -> #ff0000
+            color = ctx.fillStyle; //gjør stringen om til hexen
+            rgba_string = "rgba(" + hex_to_rgb(color) + fill_opacity + ")"; //lager stringen som trengs for at rgba skal fungere, hex_to_rgb brukes for å endre hexen om til rgb, feks: #ff0000 -> 128, 0, 0
+            ctx.fillStyle = rgba_string;
+            circle.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fill(circle);
+          }
+
         //radians = (Math.PI/180)*degrees -- degrees to radians, om det trengs
     }
 
 }
 
 //circleCanvas(22, "solid", "red")
-circleCanvas(22, "outline", "red")
+//circleCanvas(22, "outline", "red")
+circleCanvas(22, 0.5, "blue")
 
+
+
+
+
+///hex to rgb///
+function hex_to_rgb(hex){
+    hex = hex.replace('#', '');
+    var r = parseInt(hex.substring(0, 2), 16);
+    var g = parseInt(hex.substring(2, 4), 16);
+    var b = parseInt(hex.substring(4, 6), 16);
+    rgb = r + ", " + g + ", " + b + ", "
+    return rgb
+}
+hex_to_rgb("#ff0000")
 
 
 ///SVG///
@@ -65,13 +100,15 @@ function rectangleSVG(width, height, mode, color){
             rectangle.setAttributeNS(null, 'stroke-width', 2);
             rectangle.setAttributeNS(null, 'fill', "none");
         }
-        const mode_tekst = mode.split("(");
-        if (mode_tekst[0] == "mode-fade"){
-            var fill_opacity = mode_tekst[1].replace(")", "")
-            console.log("HER DIN TULLING", fill_opacity)
+        //const mode_tekst = mode.split("(");
+        //if (mode_tekst[0] == "mode-fade"){
+        //    var fill_opacity = mode_tekst[1].replace(")", "")
+            //console.log("HER DIN TULLING", fill_opacity)
+
+        if (typeof mode == 'number'){
+            var fill_opacity = mode
             rectangle.setAttributeNS(null, 'fill-opacity', fill_opacity);
         }
-        console.log("FAEN", mode_tekst)
         svg.appendChild(rectangle);
         console.log(svg)
 })
@@ -89,6 +126,8 @@ function circleSVG(radius, mode, color){
         circle.setAttributeNS(null, 'cx', 50);
         circle.setAttributeNS(null, 'cy', 50);
         circle.setAttributeNS(null, 'r', radius);
+        circle.setAttribute("fill", color);
+
         if (mode == "solid"){
             circle.setAttributeNS(null, 'fill', color);
         }
@@ -100,13 +139,21 @@ function circleSVG(radius, mode, color){
             //stroke-width: 2px;
             //stroke: maroon;
         }
+        //const mode_tekst = mode.split("(");
+        if (typeof mode == 'number'){
+            var fill_opacity = mode
+            //console.log("HER DIN TULLING", fill_opacity)
+            circle.setAttributeNS(null, 'fill-opacity', fill_opacity);
+        }
 
         ///circle.setAttributeNS(null, 'fill-opacity', 0.5);  fra 0 til 1, 1 er solid, 0 er ingenting
 
         //fill-opacity="0.5"
         //fill="purple"
+        console.log(circle)
         svg.appendChild(circle);
     })
 }
 //circleSVG(22, "solid", "red")
 circleSVG(22, "outline", "red")
+circleSVG(10, 0.5, "red")
