@@ -1,32 +1,15 @@
+//import circleCanvas from ".js/figures.js";
+import circleCanvas from "js/figures.js";
 
+//circleCanvas(22, 0.5, "blue")
 
-function draw() {
-    const canvas = document.getElementById("canvas");
-    if (canvas.getContext) {
-      const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "red";
-        ctx.fillRect(0, 0, 999, 10); //1
-        ctx.fillRect(0, 20, 999, 10); //3
-        ctx.fillRect(0, 40, 999, 10); //5
-        ctx.fillRect(0, 60, 999, 10); //7
-        ctx.fillRect(0, 80, 999, 10); //9
-        ctx.fillRect(0, 100, 999, 10); //11
-        ctx.fillRect(0, 120, 999, 10); //13
-
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 10, 999, 10); //2
-        ctx.fillRect(0, 30, 999, 10); //4
-        ctx.fillRect(0, 50, 999, 10); //6
-        ctx.fillRect(0, 70, 999, 10); //8
-        ctx.fillRect(0, 90, 999, 10); //10
-        ctx.fillRect(0, 110, 999, 10); //12
-
-        ctx.fillStyle = "blue";
-        ctx.fillRect(0, 0, 100, 70); //blaa rektangel
-   }
+function draw_figure(){
+    circleCanvas(20, "solid", "red")
 }
   
-draw();
+
+draw_figure()
+//draw();
   
 document.addEventListener("DOMContentLoaded", function() {
     var svg = document.getElementById('SVGobjekt');
