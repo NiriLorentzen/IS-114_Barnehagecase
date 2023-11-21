@@ -75,7 +75,8 @@ function hex_to_rgb(hex){
     var r = parseInt(hex.substring(0, 2), 16);
     var g = parseInt(hex.substring(2, 4), 16);
     var b = parseInt(hex.substring(4, 6), 16);
-    rgb = r + ", " + g + ", " + b + ", "
+    console.log("R", r, "G", g, "B", b)
+    var rgb = r + ", " + g + ", " + b + ", "
     return rgb
 }
 hex_to_rgb("#ff0000")
