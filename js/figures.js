@@ -25,7 +25,7 @@ rectangleCanvas(999, 999, 0.5, "red")
 rectangleCanvas(10, 10, "solid", "blue")
 rectangleCanvas(150, 100, "outline", "blue")
 
-export function circleCanvas(radius, mode, color){
+function circleCanvas(radius, mode, color){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
@@ -58,6 +58,8 @@ export function circleCanvas(radius, mode, color){
     }
 
 }
+
+export {circleCanvas};
 
 //circleCanvas(22, "solid", "red")
 //circleCanvas(22, "outline", "red")
