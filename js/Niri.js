@@ -5,8 +5,16 @@ import {rectangleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagec
 //circleCanvas(22, 0.5, "blue")
 
 function draw_figure(){
-    circleCanvas(20, "solid", "red", 20, 50);
-    rectangleCanvas(150, 100, "solid", "blue", 50, 30);
+    //circleCanvas(20, "solid", "red", 20, 50);
+    rectangleCanvas(999, 10, "solid", "red", 0, 0);
+    rectangleCanvas(999, 10, "solid", "white", 0, 10);
+    rectangleCanvas(999, 10, "solid", "red", 0, 20);
+    rectangleCanvas(999, 10, "solid", "white", 0, 30);
+    rectangleCanvas(999, 10, "solid", "red", 0, 40);
+    rectangleCanvas(999, 10, "solid", "white", 0, 50);
+    rectangleCanvas(999, 10, "solid", "red", 0, 60);
+    rectangleCanvas(999, 10, "solid", "white", 0, 70);
+    rectangleCanvas(999, 10, "solid", "red", 0, 80);
 }
   
 
