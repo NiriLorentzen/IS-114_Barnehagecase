@@ -1,5 +1,5 @@
 //import circleCanvas from ".js/figures.js";
-import {circleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/Niri.js";
+import {circleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 
 //circleCanvas(22, 0.5, "blue")
 
