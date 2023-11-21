@@ -149,3 +149,4 @@ function circleSVG(radius, mode, color, x, y){
 
 
 export {rectangleSVG};
+export {circleSVG};

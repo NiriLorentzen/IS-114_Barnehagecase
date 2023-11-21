@@ -3,7 +3,7 @@ import {circleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase
 import {rectangleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 
 import {rectangleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
-//import {circleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
+import {circleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 
 //circleCanvas(22, 0.5, "blue")
 
