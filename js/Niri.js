@@ -1,9 +1,9 @@
 //import circleCanvas from ".js/figures.js";
-import {circleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
-import {rectangleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
+import {circleCanvas} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
+import {rectangleCanvas} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 
-import {rectangleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
-import {circleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
+import {rectangleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
+import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 
 
 
@@ -86,3 +86,8 @@ const yAxis = d3.axisLeft(yScale);
 svg.append("g")
     .attr("class", "axis")
     .call(yAxis);
+
+
+
+
+    
