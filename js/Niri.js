@@ -5,6 +5,8 @@ import {rectangleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagec
 import {rectangleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 import {circleSVG} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 
+
+
 //circleCanvas(22, 0.5, "blue")
 
 function draw_canvas(){
@@ -50,6 +52,7 @@ function draw_svg(){
 draw_svg()
 
 
+circleSVG(10, "solid", "red", 50, 50)
 
 
 //graf dritt//

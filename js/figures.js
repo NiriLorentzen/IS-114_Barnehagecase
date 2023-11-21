@@ -132,7 +132,6 @@ function circleSVG(radius, mode, color, x, y){
             //stroke-width: 2px;
             //stroke: maroon;
         }
-        //const mode_tekst = mode.split("(");
         if (typeof mode == 'number'){
             var fill_opacity = mode
             //console.log("HER DIN TULLING", fill_opacity)
@@ -140,13 +139,10 @@ function circleSVG(radius, mode, color, x, y){
         }
 
         ///circle.setAttributeNS(null, 'fill-opacity', 0.5);  fra 0 til 1, 1 er solid, 0 er ingenting
-
-        //fill-opacity="0.5"
-        //fill="purple"
         svg.appendChild(circle);
     })
 }
 
 
-export {rectangleSVG};
 export {circleSVG};
+export {rectangleSVG};
