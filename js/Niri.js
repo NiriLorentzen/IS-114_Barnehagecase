@@ -15,6 +15,12 @@ function draw_figure(){
     rectangleCanvas(999, 10, "solid", "red", 0, 60);
     rectangleCanvas(999, 10, "solid", "white", 0, 70);
     rectangleCanvas(999, 10, "solid", "red", 0, 80);
+    rectangleCanvas(999, 10, "solid", "white", 0, 90);
+    rectangleCanvas(999, 10, "solid", "red", 0, 100);
+    rectangleCanvas(999, 10, "solid", "white", 0, 110);
+    rectangleCanvas(999, 10, "solid", "red", 0, 120);
+
+    rectangleCanvas(100, 70, "solid", "blue", 0, 0);
 }
   
 
