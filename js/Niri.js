@@ -86,3 +86,8 @@ const yAxis = d3.axisLeft(yScale);
 svg.append("g")
     .attr("class", "axis")
     .call(yAxis);
+
+
+
+
+    
