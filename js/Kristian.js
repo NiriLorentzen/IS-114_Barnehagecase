@@ -15,7 +15,9 @@ draw_canvas();
 
 function draw_svg(){
     rectangleSVG(400, 400, "solid", "black", 0, 0);
-    circleSVG(150, 150, "solid", "red", 125, 65);
+    fuck = circleSVG(150, 150, "solid", "red", 125, 65);
+    console.log(fuck)
+    circleSVG(150, 150, "solid", "red", 125, 65)
 }
 
 draw_svg();
