@@ -147,5 +147,5 @@ function circleSVG(radius, mode, color, x, y){
     })
 }
 
-export {circleSVG};
+
 export {rectangleSVG};
