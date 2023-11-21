@@ -14,7 +14,7 @@ function rectangleCanvas(width, height, mode, color){
         var fill_opacity = mode;
         ctx.fillStyle = color; //gjør string tekst om til hex, "red" -> #ff0000
         color = ctx.fillStyle; //gjør stringen om til hexen
-        rgba_string = "rgba(" + hex_to_rgb(color) + fill_opacity + ")"; //lager stringen som trengs for at rgba skal fungere, hex_to_rgb brukes for å endre hexen om til rgb, feks: #ff0000 -> 128, 0, 0
+        var rgba_string = "rgba(" + hex_to_rgb(color) + fill_opacity + ")"; //lager stringen som trengs for at rgba skal fungere, hex_to_rgb brukes for å endre hexen om til rgb, feks: #ff0000 -> 128, 0, 0
         ctx.fillStyle = rgba_string;
         ctx.fillRect(0, 0, width, height)
       }
@@ -30,8 +30,8 @@ function circleCanvas(radius, mode, color){
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         const circle = new Path2D();
-        x = 100
-        y = 35
+        var x = 100
+        var y = 35
         if (mode == "solid"){
             ctx.fillStyle = color;
             circle.arc(x, y, radius, 0, 2 * Math.PI);
