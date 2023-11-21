@@ -20,8 +20,8 @@ function draw_svg(){
 rectangleSVG(400, 400, "solid", "white", 0, 0);
 circleSVG(50, "solid", "yellow", 125, 65);
 rectangleSVG(20, 5, "solid", "black", 120, 75);
-circleSVG(15, "solid", "black", 45, 120);
-circleSVG(15, "solid", "black", 90, 165);
+circleSVG(15, "solid", "black", 120, 45);
+circleSVG(15, "solid", "black", 165, 90);
 }
 
 draw_svg()
