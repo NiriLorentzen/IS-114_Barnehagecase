@@ -21,9 +21,7 @@ function rectangleCanvas(width, height, mode, color){
    }
 }
 
-//rectangleCanvas(999, 999, 0.5, "red")
-//rectangleCanvas(10, 10, "solid", "blue")
-//rectangleCanvas(150, 100, "outline", "blue")
+
 
 function circleCanvas(radius, mode, color){
     const canvas = document.getElementById("canvas");
