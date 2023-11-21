@@ -14,7 +14,6 @@ function draw_canvas(){
     rectangleCanvas(120, 25,"solid", "green", -20, 68);
     rectangleCanvas(120, 15,"solid", "#80FC38", -20, 73);
     rectangleCanvas(120, 8,"solid", "white", -20, 77);
-    circleCanvas(15, "solid", "grey", 150, 70); 
 }
 
 draw_canvas()
@@ -29,7 +28,6 @@ function draw_SVG(){
     rectangleSVG(120, 25,"solid", "green", -20, 68);
     rectangleSVG(120, 15,"solid", "#80FC38", -20, 73);
     rectangleSVG(120, 8,"solid", "white", -20, 77);
-    circleSVG(15, "solid", "grey", 150, 70); 
 }
 
 draw_SVG()
