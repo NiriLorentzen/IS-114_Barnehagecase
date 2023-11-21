@@ -23,13 +23,11 @@ function rectangleCanvas(width, height, mode, color, x, y){
 
 
 
-function circleCanvas(radius, mode, color){
+function circleCanvas(radius, mode, color, x, y){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         const circle = new Path2D();
-        var x = 100
-        var y = 35
         if (mode == "solid"){
             ctx.fillStyle = color;
             circle.arc(x, y, radius, 0, 2 * Math.PI);
