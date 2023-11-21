@@ -59,10 +59,6 @@ function circleCanvas(radius, mode, color, x, y){
 export {circleCanvas};
 export {rectangleCanvas};
 
-//circleCanvas(22, "solid", "red")
-//circleCanvas(22, "outline", "red")
-//circleCanvas(22, 0.5, "blue")
-
 
 
 
@@ -82,7 +78,7 @@ function hex_to_rgb(hex){
 
 
 ///SVG///
-function rectangleSVG(width, height, mode, color){
+function rectangleSVG(width, height, mode, color, x, y){
     document.addEventListener("DOMContentLoaded", function() {
         var svg = document.getElementById('SVGobjekt');
 
@@ -90,8 +86,8 @@ function rectangleSVG(width, height, mode, color){
             rectangle.setAttribute("width", width);
             rectangle.setAttribute("height", height);
             rectangle.setAttribute("fill", color);
-            rectangle.setAttribute("x", "0");
-            rectangle.setAttribute("y", "0");
+            rectangle.setAttribute("x", x);
+            rectangle.setAttribute("y", y);
 
         if (mode == "solid"){
             rectangle.setAttributeNS(null, 'fill', color);
@@ -113,17 +109,15 @@ function rectangleSVG(width, height, mode, color){
         svg.appendChild(rectangle);
 })
 }
-//rectangleSVG(150, 100, "outline", "red")
-//rectangleSVG(30, 70, "solid", "green")
-//rectangleSVG(50, 50, 0.7, "blue")
 
-function circleSVG(radius, mode, color){
+
+function circleSVG(radius, mode, color, x, y){
     document.addEventListener("DOMContentLoaded", function() {
         var svg = document.getElementById('SVGobjekt');
 
         var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-        circle.setAttributeNS(null, 'cx', 50);
-        circle.setAttributeNS(null, 'cy', 50);
+        circle.setAttributeNS(null, 'cx', x);
+        circle.setAttributeNS(null, 'cy', y);
         circle.setAttributeNS(null, 'r', radius);
         circle.setAttribute("fill", color);
 
@@ -152,6 +146,6 @@ function circleSVG(radius, mode, color){
         svg.appendChild(circle);
     })
 }
-//circleSVG(22, "solid", "red")
-//circleSVG(22, "outline", "red")
-//circleSVG(10, 0.5, "red")
+
+export {circleSVG};
+export {rectangleSVG};
