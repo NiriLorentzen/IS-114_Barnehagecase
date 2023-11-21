@@ -1,10 +1,12 @@
 //import circleCanvas from ".js/figures.js";
 import {circleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
+import {rectangleCanvas} from "https://nirilorentzen.github.io/IS-114_Barnehagecase/js/figures.js";
 
 //circleCanvas(22, 0.5, "blue")
 
 function draw_figure(){
-    circleCanvas(20, "solid", "red")
+    circleCanvas(20, "solid", "red");
+    rectangleCanvas(150, 100, "outline", "blue");
 }
   
 

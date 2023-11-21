@@ -21,9 +21,9 @@ function rectangleCanvas(width, height, mode, color){
    }
 }
 
-rectangleCanvas(999, 999, 0.5, "red")
-rectangleCanvas(10, 10, "solid", "blue")
-rectangleCanvas(150, 100, "outline", "blue")
+//rectangleCanvas(999, 999, 0.5, "red")
+//rectangleCanvas(10, 10, "solid", "blue")
+//rectangleCanvas(150, 100, "outline", "blue")
 
 function circleCanvas(radius, mode, color){
     const canvas = document.getElementById("canvas");
@@ -61,10 +61,11 @@ function circleCanvas(radius, mode, color){
 }
 
 export {circleCanvas};
+export {rectangleCanvas};
 
 //circleCanvas(22, "solid", "red")
 //circleCanvas(22, "outline", "red")
-circleCanvas(22, 0.5, "blue")
+//circleCanvas(22, 0.5, "blue")
 
 
 
@@ -81,7 +82,7 @@ function hex_to_rgb(hex){
     console.log(rgb)
     return rgb
 }
-hex_to_rgb("#ff0000")
+//hex_to_rgb("#ff0000")
 
 
 ///SVG///
@@ -116,9 +117,9 @@ function rectangleSVG(width, height, mode, color){
         svg.appendChild(rectangle);
 })
 }
-rectangleSVG(150, 100, "outline", "red")
-rectangleSVG(30, 70, "solid", "green")
-rectangleSVG(50, 50, 0.7, "blue")
+//rectangleSVG(150, 100, "outline", "red")
+//rectangleSVG(30, 70, "solid", "green")
+//rectangleSVG(50, 50, 0.7, "blue")
 
 function circleSVG(radius, mode, color){
     document.addEventListener("DOMContentLoaded", function() {
@@ -156,5 +157,5 @@ function circleSVG(radius, mode, color){
     })
 }
 //circleSVG(22, "solid", "red")
-circleSVG(22, "outline", "red")
-circleSVG(10, 0.5, "red")
+//circleSVG(22, "outline", "red")
+//circleSVG(10, 0.5, "red")
