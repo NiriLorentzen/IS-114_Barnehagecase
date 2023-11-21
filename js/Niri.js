@@ -1,5 +1,5 @@
 //import circleCanvas from ".js/figures.js";
-import {circleCanvas} from ".js/figures.js";
+import {circleCanvas} from "js/figures.js";
 
 //circleCanvas(22, 0.5, "blue")
 
