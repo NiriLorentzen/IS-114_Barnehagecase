@@ -1,14 +1,14 @@
-function rectangleCanvas(width, height, mode, color){
+function rectangleCanvas(width, height, mode, color, x, y){
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       const ctx = canvas.getContext("2d");
       if (mode == "solid"){
         ctx.fillStyle = color;
-        ctx.fillRect(0, 0, width, height)
+        ctx.fillRect(x, y, width, height)
       }      
       if (mode == "outline"){
         ctx.strokeStyle = color;
-        ctx.strokeRect(0, 0, width, height)
+        ctx.strokeRect(x, y, width, height)
       }
       if (typeof mode == 'number'){
         var fill_opacity = mode;
@@ -16,7 +16,7 @@ function rectangleCanvas(width, height, mode, color){
         color = ctx.fillStyle; //gjør stringen om til hexen
         var rgba_string = "rgba(" + hex_to_rgb(color) + fill_opacity + ")"; //lager stringen som trengs for at rgba skal fungere, hex_to_rgb brukes for å endre hexen om til rgb, feks: #ff0000 -> 128, 0, 0
         ctx.fillStyle = rgba_string;
-        ctx.fillRect(0, 0, width, height)
+        ctx.fillRect(x, y, width, height)
       }
    }
 }
