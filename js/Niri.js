@@ -52,8 +52,6 @@ function draw_svg(){
 draw_svg()
 
 
-circleSVG(10, "solid", "red", 50, 50)
-
 
 //graf dritt//
 const data = [0, 30, 37, 5, 4, 15, 48, 12, 4];
