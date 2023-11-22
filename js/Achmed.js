@@ -50,14 +50,24 @@ window.onload = function() {
 function drawConeSVG(){
     document.addEventListener("DOMContentLoaded", function() {
         var svg = document.getElementById("SVGobjekt");
-        var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        var polygon_1 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         
-        polygon.setAttribute("fill", "#8e44ad");
-        polygon.setAttribute("stroke", "black")
-        polygon.setAttribute("points", "150,250 200,400 250,250");
+        polygon_1.setAttribute("fill", "#8e44ad");
+        polygon_1.setAttribute("stroke", "black")
+        polygon_1.setAttribute("points", "150,250 200,400 250,250");
         console.log(svg);
-        console.log(polygon);
-        svg.appendChild(polygon);  
+        console.log(polygon_1);
+        svg.appendChild(polygon_1);
+
+        var polygon_2 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        
+        polygon_2.setAttribute("fill", "#8e44ad");
+        polygon_2.setAttribute("stroke", "black")
+        polygon_2.setAttribute("points", "200, 100 150, 250 250,250");
+        console.log(svg);
+        console.log(polygon_2);
+        svg.appendChild(polygon_2);
+
 
 }
     )
