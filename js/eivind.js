@@ -20,6 +20,7 @@ function draw_tip_canvas() {
       ctx.fill();
       console.log("test", ctx)
     }
+    console.log(canvas.getContext)
     console.log(canvas)
   }
 
