@@ -44,7 +44,7 @@ function draw_canvas(){
 
 function canvas_figure(){
   draw_canvas()
-  draw_tip_canvas
+  draw_tip_canvas()
 }
 
 canvas_figure()
