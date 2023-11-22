@@ -72,7 +72,5 @@ function draw_svg (){
 }
 
 
-ctx.moveTo(75, 75);
-ctx.lineTo(200, 75);
-ctx.lineTo(137.5, 25);
+
 draw_svg();
