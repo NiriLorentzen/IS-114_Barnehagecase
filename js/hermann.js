@@ -14,9 +14,9 @@ function drawCanvas() {
         ctx.fillStyle = "green";
 
         ctx.beginPath();
-        ctx.moveTo(75, 75);
-        ctx.lineTo(200, 75);
-        ctx.lineTo(137.5, 25);
+        ctx.moveTo(55, 95);
+        ctx.lineTo(100, 30);
+        ctx.lineTo(145, 95);
         ctx.fill();
 
         //ctx.fillStyle = "brown";
@@ -24,7 +24,7 @@ function drawCanvas() {
         //ctx.fillRect(112.5, 75, 50, 50);
 
     }
-    rectangleCanvas(112.5, 75, "solid", "brown", 50, 50, "hermann");
+    rectangleCanvas(35, 72.5, "solid", "brown", 82.5, 95, "hermann");
 }
 
 drawCanvas();
