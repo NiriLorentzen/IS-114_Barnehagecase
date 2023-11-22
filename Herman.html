@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barnehagecase IS-114 Gruppe 9B</title>
     <link rel="stylesheet" href="css/gruppe_9b.css">
+    <style>
+        #header1 {
+            font-weight: bolder;
+            font-size: 40px;
+            text-align: left;
+            color: white;
+            margin-left: 25px;
+        }
+        #herman_info {
+            color: white;
+            text-align: left;
+            font-size: 18px;
+            margin-left: 25px;
+        }
+        #canvas {
+            position: absolute;
+            background-color: white;
+            height: 200px;
+            width: 200px;
+        }
+        .canvas-figur {
+            margin-top: 100px;
+        }
+        .svg-figur {
+        margin-left: 250px;
+        }
+        #SVGobjekt {
+            background-color: white;
+        }
+    
+    
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,5 +49,91 @@
         <a href="Eivind.html">Eivind</a>
         <a class="aktiv" href="Herman.html">Herman</a>
     </nav>
+
+    <h1 id="header1">Herman</h1>
+    <br>
+    <p id="herman_info"> Jeg er født 17.02.2003 og kommer fra Kristiansand </p>
+        
+        
+        <div class="canvas-figur"><a href="https://github.com/yolohermi/IS-114_main-oppgaver.git" 
+            target="_blank"><canvas id="canvas"></canvas></a>
+       
+        </div>
+
+<div class="svg-figur"><a href="https://github.com/yolohermi/IS-114_main-oppgaver.git" 
+    target="_blank"><svg id="SVGobjekt" data="path/to/external.svg" type="image/svg+xml" 
+    width="200" height="200"></svg> </a>
+    </div>    
+        
+    <img src="images/bar-chart.jpg">
+<script>
+
+
+function drawCanvas() {
+    const canvas = document.getElementById("canvas"); 
+    if (canvas.getContext) {
+        const ctx = canvas.getContext("2d"); 
+
+//Lager en trekant
+
+        ctx.fillStyle = "green";
+
+        ctx.beginPath();
+        ctx.moveTo(75, 75);
+        ctx.lineTo(200, 75);
+        ctx.lineTo(137.5, 25);
+        ctx.fill();
+
+//Lager en firkant
+
+        ctx.fillStyle = "brown";
+
+        ctx.fillRect(112.5, 75, 50, 50);
+
+    }
+}
+
+drawCanvas();
+
+function rectangleSVG(width, height, mode, color, x, y){
+    document.addEventListener("DOMContentLoaded", function() {
+        var svg = document.getElementById('SVGobjekt');
+
+        var rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rectangle.setAttribute("width", width);
+            rectangle.setAttribute("height", height);
+            rectangle.setAttribute("fill", color);
+            rectangle.setAttribute("x", x);
+            rectangle.setAttribute("y", y);
+
+        if (mode == "solid"){
+            rectangle.setAttributeNS(null, 'fill', color);
+        }
+        if (mode == "outline"){
+            rectangle.setAttributeNS(null, 'stroke', color);
+            rectangle.setAttributeNS(null, 'stroke-width', 2);
+            rectangle.setAttributeNS(null, 'fill', "none");
+        }
+        //const mode_tekst = mode.split("(");
+        //if (mode_tekst[0] == "mode-fade"){
+        //    var fill_opacity = mode_tekst[1].replace(")", "")
+            //console.log("HER DIN TULLING", fill_opacity)
+
+        if (typeof mode == 'number'){
+            var fill_opacity = mode
+            rectangle.setAttributeNS(null, 'fill-opacity', fill_opacity);
+        }
+        svg.appendChild(rectangle);
+})
+}
+
+function draw_svg (){
+    rectangleSVG(35, 72.5, "solid", "brown", 82.5, 95);
+}
+draw_svg();
+
+
+</script>
+
 </body>
 </html>
