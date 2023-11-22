@@ -22,6 +22,9 @@ function drawIceCream() {
     context.beginPath();
     context.arc(200, 100, 50, 0, Math.PI * 2);
     context.fill();
+
+    circleCanvas(50, "solid", "gold", 200, 100)
+    //(radius, mode, color, x, y
 }
 
 function drawCone() {
