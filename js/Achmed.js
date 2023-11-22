@@ -53,10 +53,10 @@ function drawConeSVG(){
         var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         
         polygon.setAttribute("fill", "gold")
-        
+
         polygon.setAttribute("points", "150,250 200,400 250,250")
 
-        svg.appendChild(svg);  
+        svg.appendChild(polygon);  
 }
     )
 }
