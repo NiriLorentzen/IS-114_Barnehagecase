@@ -74,7 +74,7 @@ function drawIceCream_SVG(){
     //circleCanvas(radius, mode, color, x, y)
 }
 
-function drawIceCream_SVG(){
+function figureSVG(){
     drawConeSVG();
     drawIceCream_SVG();
 }
@@ -82,3 +82,4 @@ function drawIceCream_SVG(){
 //            <path d="M200,100 L150,250 L250,250 Z" fill="gold"/>
 //            <circle cx="200" cy="100" r="50" fill="gold"/>
 
+figureSVG()
