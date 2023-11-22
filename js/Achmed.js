@@ -52,11 +52,13 @@ function drawConeSVG(){
         var svg = document.getElementById("svg");
         var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         
-        polygon.setAttribute("fill", "gold")
-
-        polygon.setAttribute("points", "150,250 200,400 250,250")
-
+        polygon.setAttribute("fill", "#8e44ad");
+        polygon.setAttribute("stroke", "black")
+        polygon.setAttribute("points", "150,250 200,400 250,250");
+        console.log(svg);
+        console.log(polygon);
         svg.appendChild(polygon);  
+
 }
     )
 }
