@@ -18,7 +18,9 @@ function draw_tip_canvas() {
       ctx.lineTo(80, 50);
       ctx.lineTo(65, 20);
       ctx.fill();
+      console.log("test", ctx)
     }
+    console.log(canvas)
   }
 
 //lage resten av sverdet
