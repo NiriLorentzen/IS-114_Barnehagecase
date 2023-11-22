@@ -10,7 +10,7 @@ function draw_canvas(){
     rectangleCanvas(15, 10, "solid", "white", 120, 75);
     }
 
-    draw_canvas()
+draw_canvas()
 
  function draw_svg(){
     rectangleSVG(200, 400, "solid", "grey", 0, 0);
@@ -18,4 +18,4 @@ function draw_canvas(){
      rectangleSVG(15, 10, "solid", "white", 120, 75);
      }
         
-     draw_svg() 
+draw_svg() 
