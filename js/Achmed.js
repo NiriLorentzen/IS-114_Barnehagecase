@@ -49,7 +49,7 @@ window.onload = function() {
 
 function drawConeSVG(){
     document.addEventListener("DOMContentLoaded", function() {
-        var svg = document.getElementById("svg");
+        var svg = document.getElementById("SVGobjekt");
         var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         
         polygon.setAttribute("fill", "#8e44ad");
