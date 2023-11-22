@@ -5,6 +5,7 @@ import {rectangleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.
 import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 
 function drawCanvas() {
+    rectangleCanvas(200, 200, "solid", "white", 0, 0, "hermann");
     const canvas = document.getElementById("hermann"); 
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d"); 
