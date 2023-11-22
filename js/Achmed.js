@@ -66,6 +66,8 @@ function drawConeSVG(){
             polygon.points.appendItem(point);
 }
 }
+    )
+}
 
 function drawIceCream_SVG(){
     circleSVG(50, "solid", "gold", 200, 100)
