@@ -41,6 +41,13 @@ body{
     font-family: cursive;
 }
 
+#index_canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
 /* Styles for the bar chart */
 .bar {
     fill: steelblue;
