@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barnehagecase IS-114 Gruppe 9B</title>
     <link rel="stylesheet" href="css/gruppe_9b.css">
+    <style>
+        #header1 {
+            font-weight: bolder;
+            font-size: 40px;
+            text-align: left;
+            color: white;
+            margin-left: 25px;
+        }
+        #herman_info {
+            color: white;
+            text-align: left;
+            font-size: 18px;
+            margin-left: 25px;
+        }
+        #canvas {
+            position: absolute;
+            background-color: white;
+            height: 200px;
+            width: 200px;
+        }
+        .canvas-figur {
+            margin-top: 100px;
+        }
+        .svg-figur {
+        margin-left: 250px;
+        }
+        #SVGobjekt {
+            background-color: white;
+        }
+    
+    
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,5 +49,24 @@
         <a href="Eivind.html">Eivind</a>
         <a class="aktiv" href="Herman.html">Herman</a>
     </nav>
+
+    <h1 id="header1">Herman</h1>
+    <br>
+    <p id="herman_info"> Jeg er født 17.02.2003 og kommer fra Kristiansand </p>
+        
+        
+        <div class="canvas-figur"><a href="https://github.com/yolohermi/IS-114_main-oppgaver.git" 
+            target="_blank"><canvas id="canvas"></canvas></a>
+       
+        </div>
+
+<div class="svg-figur"><a href="https://github.com/yolohermi/IS-114_main-oppgaver.git" 
+    target="_blank"><svg id="SVGobjekt" data="path/to/external.svg" type="image/svg+xml" 
+    width="200" height="200"></svg> </a>
+    </div>    
+        
+    <img src="images/bar-chart.jpg">
+<script type="module" src="js/Hermann.js"></script>
+
 </body>
 </html>
