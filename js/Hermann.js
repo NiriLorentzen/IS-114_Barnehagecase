@@ -63,7 +63,7 @@ function draw_svg (){
         var polygon_1 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
         
         polygon_1.setAttribute("fill", "green");
-        polygon_1.setAttribute("points", "55,95 100,40 145,95");
+        polygon_1.setAttribute("points", "55,95 100,30 145,95");
         console.log(svg);
         console.log(polygon_1);
         svg.appendChild(polygon_1);
