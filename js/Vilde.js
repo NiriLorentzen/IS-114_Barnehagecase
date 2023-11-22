@@ -18,4 +18,4 @@ draw_canvas()
      rectangleSVG(5, 65, "solid", "white", 100, 100);
      }
         
-draw_svg() 
+draw_svg()  
