@@ -58,20 +58,20 @@ rectangleSVG(5, 180, "solid", "gray", 63, 60);
 
 //trekant tip
 
-function drawConeSVG(){
+
   document.addEventListener("DOMContentLoaded", function() {
       var svg = document.getElementById("SVGobjekt");
       var polygon_1 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       
-      polygon_1.setAttribute("fill", "gray");
-      polygon_1.setAttribute("stroke", "black")
+      polygon_1.setAttribute("fill", "silver");
+      polygon_1.setAttribute("stroke", "black");
       polygon_1.setAttribute("points", "50,50 80,50 65,15");
       console.log(svg);
       console.log(polygon_1);
       svg.appendChild(polygon_1);
   }
   )
-}
+
 }
 
 draw_svg()
