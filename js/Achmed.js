@@ -54,7 +54,7 @@ function drawConeSVG(){
         
         polygon.setAttribute("fill", "gold")
 
-        var array = arr = [ [ 150, 250 ], 
+        var array = [ [ 150, 250 ], 
              [ 200, 400 ],
              [ 250, 250 ], ];
 
@@ -64,7 +64,7 @@ function drawConeSVG(){
             point.y = value[1];
             polygon.points.appendItem(point);
         }
-        
+
         svg.appendChild(svg);  
 }
     )
