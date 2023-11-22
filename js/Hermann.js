@@ -67,6 +67,11 @@ function draw_svg (){
         console.log(svg);
         console.log(polygon_1);
         svg.appendChild(polygon_1);
+
+
+        //ctx.moveTo(75, 75);
+        //ctx.lineTo(200, 75);
+        //ctx.lineTo(137.5, 25);
     }
     )
 }
