@@ -4,7 +4,7 @@ import {rectangleCanvas} from "https://nirilorentzen.github.io/gruppe9b/js/figur
 import {rectangleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 
-function draw_canvas(){
+function draw_figur_canvas(){
     //circleCanvas(70, "solid, "blue", 100, 100);
     rectangleCanvas(999, 900, "solid", "black", 0, 0);
     circleCanvas(50, "solid", "grey", 140, 70);
@@ -16,7 +16,8 @@ function draw_canvas(){
     rectangleCanvas(120, 8,"solid", "white", -20, 77);
 }
 
-draw_canvas()
+draw_figur_canvas()
+export {draw_figur_canvas};
 
 
 function draw_SVG(){

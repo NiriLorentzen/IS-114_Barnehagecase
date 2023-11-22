@@ -46,6 +46,8 @@ window.onload = function() {
     drawIceCreamCone();
 };
 
+export {drawIceCreamCone};
+
 
 function drawConeSVG(){
     document.addEventListener("DOMContentLoaded", function() {

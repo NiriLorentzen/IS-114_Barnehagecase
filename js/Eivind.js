@@ -37,8 +37,15 @@ function draw_canvas(){
     rectangleCanvas(5, 180, "solid", "gray", 63, 60);
 }
 
-draw_canvas()
-draw_tip_canvas()  
+
+
+function canvas_figure(){
+  draw_canvas()
+  draw_tip_canvas
+}
+
+canvas_figure()
+export {canvas_figure};
 
 //Sverd lagd med SVG
 function draw_svg(){

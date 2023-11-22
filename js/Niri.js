@@ -30,6 +30,7 @@ function draw_canvas(){
   
 
 draw_canvas()
+export {draw_canvas};
 //draw();
 
 function draw_svg(){
@@ -90,4 +91,3 @@ svg.append("g")
 
 
 
-    
