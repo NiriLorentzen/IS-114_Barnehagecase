@@ -9,7 +9,7 @@ function draw_canvas(){
     circleCanvas(35, "solid", "pink", 100, 90);
     rectangleCanvas(10, 70, "solid", "white", 100, 100);
     }
-
+ 
 draw_canvas()
 
  function draw_svg(){
