@@ -45,3 +45,38 @@ function drawIceCreamCone() {
 window.onload = function() {
     drawIceCreamCone();
 };
+
+
+function drawConeSVG(){
+    document.addEventListener("DOMContentLoaded", function() {
+        var svg = document.getElementById("svg");
+        var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        
+        polygon.setAttribute("fill", "gold")
+        svg.appendChild(svg);  
+
+        var array = arr = [ [ 150, 250 ], 
+             [ 200, 400 ],
+             [ 250, 250 ], ];
+
+        for (value of array) {
+            var point = svg.createSVGPoint();
+            point.x = value[0];
+            point.y = value[1];
+            polygon.points.appendItem(point);
+}
+}
+
+function drawIceCream_SVG(){
+    circleSVG(50, "solid", "gold", 200, 100)
+    //circleCanvas(radius, mode, color, x, y)
+}
+
+function drawIceCream_SVG(){
+    drawConeSVG();
+    drawIceCream_SVG();
+}
+//<polygon points="150,250 200,400 250,250" fill="#8e44ad"/>
+//            <path d="M200,100 L150,250 L250,250 Z" fill="gold"/>
+//            <circle cx="200" cy="100" r="50" fill="gold"/>
+
