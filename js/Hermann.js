@@ -58,5 +58,21 @@ function rectangleSVG(width, height, mode, color, x, y){
 
 function draw_svg (){
     rectangleSVG(35, 72.5, "solid", "brown", 82.5, 95);
+    document.addEventListener("DOMContentLoaded", function() {
+        var svg = document.getElementById("SVGobjekt");
+        var polygon_1 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        
+        polygon_1.setAttribute("fill", "green");
+        polygon_1.setAttribute("points", "75,75 200,75 137.5,25");
+        console.log(svg);
+        console.log(polygon_1);
+        svg.appendChild(polygon_1);
+    }
+    )
 }
+
+
+ctx.moveTo(75, 75);
+ctx.lineTo(200, 75);
+ctx.lineTo(137.5, 25);
 draw_svg();
