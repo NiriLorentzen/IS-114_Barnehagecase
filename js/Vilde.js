@@ -5,17 +5,17 @@ import {rectangleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.
 import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js";
 
 function draw_canvas(){
-    rectangleCanvas(200, 400, "solid", "grey", 0, 0);
-    circleCanvas(50, "solid", "pink", 125, 65);
-    rectangleCanvas(15, 10, "solid", "white", 120, 75);
+    rectangleCanvas(200, 200, "solid", "grey", 0, 0);
+    circleCanvas(40, "solid", "pink", 100, 50);
+    rectangleCanvas(10, 50, "solid", "white", 50, 100);
     }
 
 draw_canvas()
 
  function draw_svg(){
-    rectangleSVG(200, 400, "solid", "grey", 0, 0);
-     circleSVG(50, "solid", "pink", 125, 65);
-     rectangleSVG(15, 10, "solid", "white", 120, 75);
+    rectangleSVG(200, 200, "solid", "grey", 0, 0);
+     circleSVG(40, "solid", "pink", 100, 50);
+     rectangleSVG(10, 50, "solid", "white", 100, 50);
      }
         
 draw_svg() 
