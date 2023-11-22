@@ -8,7 +8,7 @@ import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js"
 // Sverd med Canvas API
 // Lage tuppen av sverdet
 function draw_tip_canvas() {
-    const canvas = document.getElementById("canvas");
+    const canvas = document.getElementById("eivind");
     if (canvas.getContext) {
       const ctx = canvas.getContext("2d");
   
@@ -24,17 +24,17 @@ function draw_tip_canvas() {
 //lage resten av sverdet
 function draw_canvas(){
     //background
-    rectangleCanvas(150, 400, "solid", "green", 0, 0 );
+    rectangleCanvas(150, 400, "solid", "green", 0, 0, "eivind");
     //blade
-    rectangleCanvas(30, 200, "solid", "silver", 50, 50);
+    rectangleCanvas(30, 200, "solid", "silver", 50, 50, "eivind");
     //crossguard
-    rectangleCanvas(60, 20, "solid", "gray", 35, 250);
+    rectangleCanvas(60, 20, "solid", "gray", 35, 250, "eivind");
     //hilt
-    rectangleCanvas(25, 60, "solid", "brown", 52, 270);
+    rectangleCanvas(25, 60, "solid", "brown", 52, 270, "eivind");
     //pummel
-    circleCanvas(16, "solid", "brown", 65, 340);
+    circleCanvas(16, "solid", "brown", 65, 340, "eivind");
     //fuller
-    rectangleCanvas(5, 180, "solid", "gray", 63, 60);
+    rectangleCanvas(5, 180, "solid", "gray", 63, 60, "eivind");
 }
 
 

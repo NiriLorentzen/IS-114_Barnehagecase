@@ -11,21 +11,21 @@ import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js"
 
 function draw_canvas(){
     //circleCanvas(20, "solid", "red", 20, 50);
-    rectangleCanvas(999, 10, "solid", "red", 0, 0);
-    rectangleCanvas(999, 10, "solid", "white", 0, 10);
-    rectangleCanvas(999, 10, "solid", "red", 0, 20);
-    rectangleCanvas(999, 10, "solid", "white", 0, 30);
-    rectangleCanvas(999, 10, "solid", "red", 0, 40);
-    rectangleCanvas(999, 10, "solid", "white", 0, 50);
-    rectangleCanvas(999, 10, "solid", "red", 0, 60);
-    rectangleCanvas(999, 10, "solid", "white", 0, 70);
-    rectangleCanvas(999, 10, "solid", "red", 0, 80);
-    rectangleCanvas(999, 10, "solid", "white", 0, 90);
-    rectangleCanvas(999, 10, "solid", "red", 0, 100);
-    rectangleCanvas(999, 10, "solid", "white", 0, 110);
-    rectangleCanvas(999, 10, "solid", "red", 0, 120);
+    rectangleCanvas(999, 10, "solid", "red", 0, 0, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 10, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 20, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 30, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 40, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 50, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 60, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 70, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 80, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 90, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 100, "niri");
+    rectangleCanvas(999, 10, "solid", "white", 0, 110, "niri");
+    rectangleCanvas(999, 10, "solid", "red", 0, 120, "niri");
 
-    rectangleCanvas(100, 70, "solid", "blue", 0, 0);
+    rectangleCanvas(100, 70, "solid", "blue", 0, 0, "niri");
 }
   
 

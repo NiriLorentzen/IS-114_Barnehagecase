@@ -6,7 +6,7 @@ import {circleSVG} from "https://nirilorentzen.github.io/gruppe9b/js/figures.js"
 
 
 
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('ahmet');
 var context = canvas.getContext('2d');
 
 

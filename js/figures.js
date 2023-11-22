@@ -1,5 +1,5 @@
-function rectangleCanvas(width, height, mode, color, x, y){
-    const canvas = document.getElementById("canvas");
+function rectangleCanvas(width, height, mode, color, x, y, canvas_element_id){
+    const canvas = document.getElementById(canvas_element_id);
     if (canvas.getContext) {
       const ctx = canvas.getContext("2d");
       if (mode == "solid"){
@@ -23,8 +23,8 @@ function rectangleCanvas(width, height, mode, color, x, y){
 
 
 
-function circleCanvas(radius, mode, color, x, y){
-    const canvas = document.getElementById("canvas");
+function circleCanvas(radius, mode, color, x, y, canvas_element_id){
+    const canvas = document.getElementById(canvas_element_id);
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         const circle = new Path2D();
