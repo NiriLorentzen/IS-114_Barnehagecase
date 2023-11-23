@@ -55,7 +55,7 @@ draw_svg()
 
 
 //graf dritt//
-const data = [0, 30, 37, 5, 4, 15, 48, 12, 4];
+const data = [15, 30, 37, 5, 4, 15, 48, 12, 4];
 
 const svg = d3.select("#graf");
 
